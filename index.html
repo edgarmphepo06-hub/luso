@@ -1423,6 +1423,12 @@
             <h2 class="section-title">Luso Technical College Registration Form</h2>
             <p class="section-subtitle">Register now for our 2026 intake. Complete the form below and submit your details via WhatsApp or download your filled application.</p>
             <div class="form-container" id="formContainer">
+                <!-- Logo at top of form -->
+                <div style="text-align:center;margin-bottom:24px;">
+                    <img src="LOGO.jpg" alt="Luso Technical College" style="height:70px;width:auto;border-radius:10px;margin:0 auto 12px;box-shadow:0 4px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color:var(--primary-blue);font-size:1.1rem;font-weight:700;margin-bottom:4px;">LUSO TECHNICAL COLLEGE</h3>
+                    <p style="color:var(--text-gray);font-size:0.85rem;">2026 Registration Form | "Agency for Change"</p>
+                </div>
                 <!-- College info card -->
                 <div class="form-info-card">
                     <div><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> P.O. BOX 5001, LILONGWE</div>
@@ -1493,17 +1499,10 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="dob">Date of Birth <span class="required">*</span></label>
-                                        <input type="date" id="dob" name="dob" required>
-                                        <div class="error-message" id="dobError">Please enter your date of birth.</div>
-                                    </td>
-                                    <td>
                                         <label for="startDate">Starting Date <span class="required">*</span></label>
                                         <input type="date" id="startDate" name="startDate" required>
-                                        <div class="error-message" id="startDateError">Please select your preferred start date.</div>
+                                        <div class="error-message" id="startDateError">Please select your start date.</div>
                                     </td>
-                                </tr>
-                                <tr>
                                     <td>
                                         <label for="maritalStatus">Marital Status <span class="required">*</span></label>
                                         <select id="maritalStatus" name="maritalStatus" required>
@@ -1530,9 +1529,9 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <label for="homeVillage">Street / Village / T.A <span class="required">*</span></label>
-                                        <input type="text" id="homeVillage" name="homeVillage" placeholder="Street / Village / T.A" required>
-                                        <div class="error-message" id="homeVillageError">Please enter your village or street.</div>
+                                        <label for="homeVillage">Home Village <span class="required">*</span></label>
+                                        <input type="text" id="homeVillage" name="homeVillage" placeholder="Home Village" required>
+                                        <div class="error-message" id="homeVillageError">Please enter your home village.</div>
                                     </td>
                                     <td>
                                         <label for="course">Course Applying For <span class="required">*</span></label>
@@ -1575,29 +1574,10 @@
                                     <td colspan="2">
                                         <label>Branch <span class="required">*</span></label>
                                         <div class="radio-group">
-                                            <label class="radio-label"><input type="radio" name="branch" value="Lilongwe"> Lilongwe Campus</label>
-                                            <label class="radio-label"><input type="radio" name="branch" value="Blantyre"> Blantyre Campus</label>
+                                            <label class="radio-label"><input type="radio" name="branch" value="Lilongwe"> Lilongwe <span style="font-size:0.78rem;color:var(--text-light);">[ ]</span></label>
+                                            <label class="radio-label"><input type="radio" name="branch" value="Blantyre"> Blantyre <span style="font-size:0.78rem;color:var(--text-light);">[ ]</span></label>
                                         </div>
                                         <div class="error-message" id="branchError">Please select your preferred branch.</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label for="email">Email Address <span class="required">*</span></label>
-                                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                                        <div class="error-message" id="emailError">Please enter a valid email address.</div>
-                                    </td>
-                                    <td>
-                                        <label for="address">Home Address <span class="required">*</span></label>
-                                        <input type="text" id="address" name="address" placeholder="Home Address" required>
-                                        <div class="error-message" id="addressError">Please enter your address.</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="2">
-                                        <label for="motivation">Motivation / Why do you want to study this course? <span class="required">*</span></label>
-                                        <textarea id="motivation" name="motivation" rows="4" placeholder="Tell us why you are interested in this program and how it fits your career goals..." required style="width:100%;padding:12px 16px;border:2px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;transition:var(--transition);background:var(--white);color:var(--text-dark);resize:vertical;"></textarea>
-                                        <div class="error-message" id="motivationError">Please tell us your motivation for applying.</div>
                                     </td>
                                 </tr>
                             </tbody>
@@ -1605,7 +1585,6 @@
                     </div>
                     <div class="form-actions">
                         <button type="button" class="btn btn-primary" onclick="submitApplication()"><i class="fas fa-paper-plane"></i> Submit Application</button>
-                        <button type="button" class="btn btn-blue" onclick="downloadFilledForm()"><i class="fas fa-download"></i> Download Filled Form</button>
                         <button type="button" class="btn btn-whatsapp" onclick="sendApplicationToWhatsApp()"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
                     </div>
                 </form>
@@ -2162,92 +2141,13 @@
         }
 
         function downloadBlankForm() {
-            const blankHTML = `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Luso Technical College Registration Form</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: Arial, sans-serif; color: #222; padding: 30px; line-height: 1.6; }
-        .header { text-align: center; margin-bottom: 20px; }
-        .header h1 { margin-bottom: 6px; font-size: 24px; color: #1a3a6b; }
-        .header p { font-size: 13px; color: #555; }
-        .section { margin-top: 18px; }
-        .section-title { font-size: 14px; font-weight: bold; color: #1a3a6b; margin-bottom: 10px; text-transform: uppercase; }
-        table { width: 100%; border-collapse: collapse; }
-        td { vertical-align: top; padding: 8px 0; font-size: 12px; }
-        .label { width: 180px; color: #555; font-weight: bold; }
-        .line { display: inline-block; border-bottom: 1px solid #555; width: 70%; min-height: 16px; }
-        .note { font-size: 11px; color: #555; margin-top: 8px; }
-        .footer { margin-top: 28px; font-size: 11px; color: #555; }
-        .print-btn { display: block; width: 260px; margin: 24px auto 0; padding: 12px; text-align: center; background: #1a3a6b; color: #fff; border-radius: 6px; text-decoration: none; }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>LUSO TECHNICAL COLLEGE</h1>
-        <p>2026 Registration Form</p>
-        <p>P.O. BOX 5001, Lilongwe | PHONE: 0995545449 / 0888114412 | EMAIL: lusomalawi2023@gmail.com</p>
-    </div>
-    <div class="section">
-        <div class="section-title">Course Fees</div>
-        <table>
-            <tr><td class="label">K150,000 Courses – 2 Months (Informal)</td><td class="value">ICT Computer Use, Tailoring & Fashion Design, Electrical and Solar Installation, Video Production, Electronics Repairing, Computer Repairing, Graphic Designing, Audio Production, Phone Repairing</td></tr>
-            <tr><td class="label">K250,000 Per Term / 3 Months</td><td class="value">Cosmetology (Makeup, Nails, Hair, etc.), Hospitality/Hotel Management (Catering) - ICM, Plumbing, Welding and Fabrication, Automobile Mechanics, Aircon & Refrigeration</td></tr>
-            <tr><td class="label">Diploma Courses – K250,000 per semester</td><td class="value">Business Administration, Journalism (ABMA), Secretarial (ABMA), Human Resource (ABE), Public Health (ABMA), Electrical Engineering (City & Guilds), Food & Nutrition (ABMA), Community Development (ABMA)</td></tr>
-        </table>
-    </div>
-    <div class="section">
-        <div class="section-title">Registration Details</div>
-        <table>
-            <tr><td class="label">Registration Fee</td><td class="line">K10,000 (Non-refundable)</td></tr>
-            <tr><td class="label">Course Apply For</td><td class="line"></td></tr>
-            <tr><td class="label">First Name</td><td class="line"></td></tr>
-            <tr><td class="label">Surname</td><td class="line"></td></tr>
-            <tr><td class="label">Starting Date</td><td class="line"></td></tr>
-            <tr><td class="label">Marital Status</td><td class="line"></td></tr>
-            <tr><td class="label">Personal Phone Number</td><td class="line"></td></tr>
-            <tr><td class="label">Guardian / Relative</td><td class="line"></td></tr>
-            <tr><td class="label">Home Village</td><td class="line"></td></tr>
-            <tr><td class="label">Branch</td><td class="line">Lilongwe [ ]  Blantyre [ ]</td></tr>
-        </table>
-    </div>
-    <div class="section">
-        <div class="section-title">Additional Information</div>
-        <p class="note">NB: ICM, BMEC, ABE, City & Guilds & TEVETA are examination boards.</p>
-        <p class="note">For informal courses, if you can read and write, you qualify. Our focus is 50% practical work to get you job-ready fast.</p>
-        <p class="note">With 8 years of experience training Malawians for real careers, Luso Technical College is your agency for change.</p>
-    </div>
-</body>
-</html>`;
-            const filename = 'Luso_Registration_Form.pdf';
-            const container = document.createElement('div');
-            container.style.position = 'fixed';
-            container.style.left = '-9999px';
-            container.style.top = '0';
-            container.style.width = '800px';
-            container.id = 'blankPdfContainer';
-            container.innerHTML = blankHTML;
-            document.body.appendChild(container);
-            const opt = { margin: 10, filename, image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2, useCORS: true }, jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' } };
-            if (window.html2pdf) {
-                html2pdf().from(container).set(opt).save().then(() => {
-                    if (container.parentNode) document.body.removeChild(container);
-                }).catch(err => {
-                    console.error('Blank PDF generation failed', err);
-                    if (container.parentNode) document.body.removeChild(container);
-                });
-            } else {
-                const blob = new Blob([blankHTML], { type: 'text/html' });
-                const link = document.createElement('a');
-                link.href = URL.createObjectURL(blob);
-                link.download = 'Luso_Registration_Form.html';
-                document.body.appendChild(link);
-                link.click();
-                document.body.removeChild(link);
-                if (container.parentNode) document.body.removeChild(container);
-            }
+            // Direct download of the official 2026 registration form PDF
+            const link = document.createElement('a');
+            link.href = '2026 full reg form-1.pdf';
+            link.download = '2026 Luso Registration Form.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
         }
 
         // Send the PDF blob via multipart/form-data to a serverless endpoint (Formspree/Formspark)
