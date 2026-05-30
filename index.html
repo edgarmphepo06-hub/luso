@@ -6,11 +6,11 @@
     <meta name="description" content="Luso Technical College - Practical Skills for Employment & Entrepreneurship. Empowering Malawian youth through hands-on technical and vocational education.">
     <meta name="keywords" content="Luso Technical College, Malawi, vocational training, technical education, Lilongwe, Blantyre, practical skills">
     <meta name="author" content="Luso Technical College">
-    <meta property="og:title" content="Luso Technical College - Agency for Change">
-    <meta property="og:description" content="Practical Skills for Employment & Entrepreneurship. Empowering Malawian youth through hands-on technical and vocational education.">
+    <meta property="og:title" content="Unlock Your Future with Luso Technical College">
+    <meta property="og:description" content="8 years of excellence in technical education. Luso Technical College is an international exam centre for ABMA, ABE, ICM, and City & Guilds.">
     <meta property="og:image" content="LOGO.jpg">
     <meta property="og:type" content="website">
-    <title>Luso Technical College | Agency for Change</title>
+    <title>Unlock Your Future | Luso Technical College</title>
     <link rel="icon" href="LOGO.jpg" type="image/jpeg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -121,8 +121,15 @@
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(circle at top left, rgba(245,166,35,0.14), transparent 32%),
-                        radial-gradient(circle at bottom right, rgba(255,255,255,0.1), transparent 28%);
+            background: url('HOME.jpg') center center / cover no-repeat fixed;
+            filter: brightness(0.35) saturate(0.8);
+            pointer-events: none;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(22,40,79,0.85) 0%, rgba(42,82,152,0.65) 100%);
             pointer-events: none;
         }
         .hero-grid {
@@ -245,7 +252,8 @@
         .program-card:hover .program-card-image img { transform: scale(1.08); }
         .program-card-content { padding: 20px; }
         .program-card-content h3 { font-size: 1.15rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 8px; }
-        .program-card-content p { color: var(--text-gray); font-size: 0.88rem; margin-bottom: 15px; }
+        .program-card-content p { color: var(--text-gray); font-size: 0.88rem; margin-bottom: 12px; }
+        .program-image-label { display: block; color: var(--text-light); font-size: 0.78rem; margin-bottom: 10px; }
         .program-tag { display: inline-block; padding: 4px 14px; background: var(--light-gray); border-radius: 50px; font-size: 0.78rem; color: var(--text-gray); font-weight: 500; }
 
         /* SUPPORT */
@@ -299,71 +307,458 @@
         .testimonial-info h4 { font-size: 1rem; font-weight: 600; color: var(--primary-blue); }
         .testimonial-info span { font-size: 0.82rem; color: var(--text-gray); }
 
-        /* APPLICATION FORM */
+        /* ===== APPLICATION FORM - ENHANCED STYLES ===== */
         .application { background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light)); color: var(--white); }
         .application .section-title { color: var(--white); }
         .application .section-subtitle { color: rgba(255,255,255,0.8); }
-        .form-container { max-width: 750px; margin: 0 auto; background: rgba(255,255,255,0.95); border-radius: var(--radius); padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); color: var(--text-dark); }
-        .form-step-indicator { display: flex; justify-content: center; gap: 10px; margin-bottom: 30px; }
-        .step-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--light-gray); transition: var(--transition); }
+        .form-container { max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.98); border-radius: var(--radius); padding: 40px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); color: var(--text-dark); }
+        
+        /* Form info card */
+        .form-info-card {
+            background: linear-gradient(135deg, #f0f4ff, #fbfcff);
+            border: 1px solid #e8edf8;
+            border-radius: 16px;
+            padding: 22px 26px;
+            margin-bottom: 28px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px 30px;
+            line-height: 1.7;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+        }
+        .form-info-card div i {
+            color: var(--gold);
+            width: 20px;
+            margin-right: 8px;
+        }
+
+        /* Courses list in form */
+        .form-courses-container {
+            margin-bottom: 28px;
+            display: grid;
+            gap: 16px;
+        }
+        .form-course-card {
+            background: var(--white);
+            border: 1px solid #eef2f9;
+            border-radius: 14px;
+            padding: 18px 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            transition: var(--transition);
+        }
+        .form-course-card:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+            border-color: var(--blue-accent);
+        }
+        .form-course-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .form-course-card h4 .fee-badge {
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--primary-blue);
+            font-size: 0.8rem;
+            padding: 3px 12px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-left: auto;
+        }
+        .form-course-card ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px 20px;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .form-course-card ul li {
+            font-size: 0.88rem;
+            color: var(--text-gray);
+            padding: 4px 0 4px 18px;
+            position: relative;
+        }
+        .form-course-card ul li::before {
+            content: '>';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: 700;
+        }
+
+        /* Form table styling */
+        .form-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.92rem;
+            color: var(--text-dark);
+        }
+        .form-table td {
+            padding: 12px 14px;
+            border: 1px solid #e9edf4;
+            background: #fbfcff;
+            vertical-align: top;
+        }
+        .form-table td:nth-child(odd) {
+            background: #fbfcff;
+        }
+        .form-table td:nth-child(even) {
+            background: #fff;
+        }
+        .form-table label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 6px;
+        }
+        .form-table input[type="text"],
+        .form-table input[type="tel"],
+        .form-table input[type="email"],
+        .form-table input[type="date"],
+        .form-table select {
+            width: 100%;
+            padding: 10px 14px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            font-family: inherit;
+            transition: var(--transition);
+            background: var(--white);
+            color: var(--text-dark);
+        }
+        .form-table input:focus,
+        .form-table select:focus {
+            outline: none;
+            border-color: var(--blue-accent);
+            box-shadow: 0 0 0 3px rgba(59,125,216,0.12);
+        }
+        .form-table input.error,
+        .form-table select.error {
+            border-color: #e74c3c;
+            box-shadow: 0 0 0 3px rgba(231,76,60,0.1);
+        }
+        .form-table .error-message {
+            color: #e74c3c;
+            font-size: 0.78rem;
+            margin-top: 4px;
+            display: none;
+            font-weight: 500;
+        }
+        .form-table .error-message.show { display: block; }
+
+        /* Radio group styling */
+        .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .radio-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.92rem;
+            cursor: pointer;
+            padding: 8px 18px;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            transition: var(--transition);
+            background: var(--white);
+        }
+        .radio-label:hover {
+            border-color: var(--blue-accent);
+            background: rgba(59,125,216,0.05);
+        }
+        .radio-label input[type="radio"] {
+            accent-color: var(--primary-blue);
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+        .radio-label.selected {
+            border-color: var(--primary-blue);
+            background: rgba(26,58,107,0.06);
+            font-weight: 500;
+        }
+
+        /* Form action buttons */
+        .form-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+            justify-content: center;
+        }
+        .form-actions .btn {
+            min-width: 180px;
+            justify-content: center;
+        }
+
+        /* Submission success */
+        .submission-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 24px;
+            background: linear-gradient(135deg, #f0fff4, #e8f8ee);
+            border-radius: var(--radius);
+            border: 2px solid #c6f6d5;
+        }
+        .submission-success.show { display: block; animation: fadeIn 0.5s ease; }
+        .success-icon {
+            width: 80px; height: 80px; border-radius: 50%;
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 25px; font-size: 2.5rem; color: white;
+            animation: scaleIn 0.5s ease;
+        }
+        @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
+        .submission-success h2 {
+            font-size: 1.5rem;
+            color: var(--primary-blue);
+            margin-bottom: 10px;
+        }
+        .submission-success p { color: var(--text-gray); margin-bottom: 20px; font-size: 0.95rem; }
+        .success-actions {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        /* Step indicator */
+        .form-step-indicator {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        .step-dot {
+            width: 12px; height: 12px; border-radius: 50%;
+            background: var(--light-gray);
+            transition: var(--transition);
+        }
         .step-dot.active { background: var(--gold); transform: scale(1.2); }
         .step-dot.completed { background: var(--blue-accent); }
         .form-step { display: none; animation: fadeIn 0.4s ease; }
         .form-step.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-        .form-step h3 { font-size: 1.3rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 5px; }
-        .form-step p { color: var(--text-gray); font-size: 0.9rem; margin-bottom: 25px; }
-        .form-group { margin-bottom: 20px; }
-        .form-group label { display: block; font-size: 0.9rem; font-weight: 500; color: var(--text-dark); margin-bottom: 6px; }
-        .form-group label .required { color: #e74c3c; margin-left: 2px; }
-        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px 16px; border: 2px solid var(--light-gray); border-radius: var(--radius-sm); font-size: 0.95rem; font-family: inherit; transition: var(--transition); background: var(--white); color: var(--text-dark); }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--blue-accent); box-shadow: 0 0 0 3px rgba(59,125,216,0.1); }
-        .form-group input.error, .form-group select.error, .form-group textarea.error { border-color: #e74c3c; }
-        .form-group .error-message { color: #e74c3c; font-size: 0.82rem; margin-top: 4px; display: none; }
-        .form-group .error-message.show { display: block; }
-        .form-group textarea { resize: vertical; min-height: 100px; }
-        .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .file-upload-area { border: 2px dashed var(--light-gray); border-radius: var(--radius-sm); padding: 30px; text-align: center; cursor: pointer; transition: var(--transition); background: var(--off-white); }
-        .file-upload-area:hover { border-color: var(--blue-accent); background: rgba(59,125,216,0.05); }
-        .file-upload-area i { font-size: 2.5rem; color: var(--blue-accent); margin-bottom: 10px; }
-        .file-upload-area p { color: var(--text-gray); font-size: 0.9rem; }
-        .file-upload-area .file-types { font-size: 0.8rem; color: var(--text-light); margin-top: 5px; }
-        .file-upload-area.has-file { border-color: #27ae60; background: rgba(39,174,96,0.05); }
-        .file-name-display { display: none; align-items: center; gap: 10px; padding: 10px 16px; background: rgba(39,174,96,0.1); border-radius: var(--radius-sm); color: #27ae60; font-size: 0.9rem; margin-top: 10px; }
-        .file-name-display.show { display: flex; }
-        .file-name-display i { font-size: 1.2rem; }
-        .file-name-display .remove-file { margin-left: auto; cursor: pointer; color: #e74c3c; }
-        .form-buttons { display: flex; gap: 15px; margin-top: 30px; justify-content: space-between; }
-        .form-buttons .btn { min-width: 140px; justify-content: center; }
-        .btn-prev { background: var(--light-gray); color: var(--text-dark); }
-        .btn-prev:hover { background: #d4d9e0; }
+        .form-step h3 { font-size: 1.2rem; font-weight: 600; color: var(--primary-blue); margin-bottom: 4px; }
+        .form-step p { color: var(--text-gray); font-size: 0.88rem; margin-bottom: 22px; }
 
-        /* PASSPORT PREVIEW */
-        .passport-preview-container {
-            display: none; margin-top: 10px; position: relative;
-            width: 120px; height: 140px; border-radius: var(--radius-sm);
-            overflow: hidden; border: 3px solid var(--blue-accent);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        /* Passport photo notice */
+        .passport-notice {
+            background: #fff8e1;
+            border: 1px solid #ffe082;
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin-top: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: #6d4c00;
         }
-        .passport-preview-container img {
-            width: 100%; height: 100%; object-fit: cover;
+        .passport-notice i {
+            color: #f5a623;
+            font-size: 1.4rem;
+            margin-top: 2px;
+            flex-shrink: 0;
         }
-        .passport-preview-container .remove-preview {
-            position: absolute; top: -8px; right: -8px;
-            width: 24px; height: 24px; border-radius: 50%;
-            background: #e74c3c; color: white; display: flex;
-            align-items: center; justify-content: center;
-            font-size: 0.8rem; cursor: pointer; border: 2px solid white;
+        .passport-notice strong {
+            color: #4a3400;
         }
 
-        /* SUBMISSION SUCCESS */
-        .submission-success { display: none; text-align: center; padding: 40px 20px; }
-        .submission-success.show { display: block; animation: fadeIn 0.5s ease; }
-        .success-icon { width: 80px; height: 80px; border-radius: 50%; background: #27ae60; display: flex; align-items: center; justify-content: center; margin: 0 auto 25px; font-size: 2.5rem; color: white; animation: scaleIn 0.5s ease; }
-        @keyframes scaleIn { from { transform: scale(0); } to { transform: scale(1); } }
-        .submission-success h2 { font-size: 1.6rem; color: var(--primary-blue); margin-bottom: 10px; }
-        .submission-success p { color: var(--text-gray); margin-bottom: 25px; }
-        .submission-success .success-actions { display: flex; gap: 15px; justify-content: center; flex-wrap: wrap; }
+        /* ===== FEES SECTION - ENHANCED STYLES ===== */
+        .fees-section {
+            background: var(--off-white);
+            position: relative;
+        }
+        .fees-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--gold), var(--primary-blue));
+        }
+        .fees-header {
+            text-align: center;
+            max-width: 750px;
+            margin: 0 auto 45px;
+        }
+        .fees-header h2 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            margin-bottom: 12px;
+        }
+        .fees-header p {
+            color: var(--text-gray);
+            font-size: 1.02rem;
+        }
+        .fees-header .reg-fee-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--primary-blue);
+            padding: 8px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            margin-top: 12px;
+            box-shadow: 0 4px 15px rgba(245,166,35,0.25);
+        }
+
+        .fees-grid {
+            display: grid;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .fee-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border-left: 5px solid var(--gold);
+        }
+        .fee-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        .fee-card-header {
+            padding: 22px 28px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 15px;
+            border-bottom: 1px solid var(--light-gray);
+        }
+        .fee-card-header h3 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .fee-card-header h3 i {
+            color: var(--gold);
+            font-size: 1.3rem;
+        }
+        .fee-amount {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+            color: var(--white);
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1rem;
+            white-space: nowrap;
+        }
+        .fee-card-body {
+            padding: 20px 28px 24px;
+        }
+        .fee-course-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 10px;
+        }
+        .fee-course-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            background: var(--off-white);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: var(--text-dark);
+            transition: var(--transition);
+        }
+        .fee-course-item:hover {
+            background: #eef2f9;
+            transform: translateX(4px);
+        }
+        .fee-course-item i {
+            color: var(--gold);
+            font-size: 0.8rem;
+            flex-shrink: 0;
+        }
+        .fee-card-footer {
+            padding: 16px 28px;
+            background: #f8f9fd;
+            border-top: 1px solid var(--light-gray);
+            font-size: 0.88rem;
+            color: var(--text-gray);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .fee-card-footer .duration-tag {
+            display: inline-block;
+            padding: 4px 14px;
+            background: rgba(26,58,107,0.08);
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: var(--primary-blue);
+            font-weight: 500;
+        }
+
+        /* Fees important info box */
+        .fees-info-box {
+            background: linear-gradient(135deg, rgba(26,58,107,0.04), rgba(245,166,35,0.04));
+            border: 1px solid rgba(245,166,35,0.2);
+            border-left: 5px solid var(--gold);
+            border-radius: var(--radius);
+            padding: 28px 32px;
+            margin-top: 35px;
+            max-width: 1100px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .fees-info-box h4 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--primary-blue);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .fees-info-box h4 i {
+            color: var(--gold);
+        }
+        .fees-info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px 30px;
+        }
+        .fees-info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.92rem;
+            color: var(--text-gray);
+            padding: 6px 0;
+        }
+        .fees-info-item i {
+            color: var(--gold);
+            margin-top: 4px;
+            flex-shrink: 0;
+        }
+        .fees-info-item strong {
+            color: var(--text-dark);
+        }
 
         /* CONTACT */
         .contact { background: var(--white); }
@@ -464,6 +859,7 @@
             .hero-image-card img { min-height: 360px; }
             .about-grid { gap: 40px; }
             .footer-grid { grid-template-columns: 1fr 1fr; }
+            .fees-info-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
             .nav-links { display: none; position: fixed; top: 70px; left: 0; right: 0; background: white; flex-direction: column; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); gap: 15px; }
@@ -483,14 +879,21 @@
             .section-title { font-size: 1.7rem; }
             .form-container { padding: 25px 20px; }
             .form-row { grid-template-columns: 1fr; }
-            .form-buttons { flex-direction: column; }
-            .form-buttons .btn { width: 100%; }
+            .form-actions { flex-direction: column; align-items: stretch; }
+            .form-actions .btn { width: 100%; min-width: unset; }
             .testimonials-grid { grid-template-columns: 1fr; }
             .programs-grid { grid-template-columns: 1fr 1fr; }
             .gallery-grid { grid-template-columns: 1fr 1fr; }
             .footer-bottom { flex-direction: column; text-align: center; }
             .review-footer { flex-direction: column; align-items: center; }
             .review-footer .btn { width: 100%; }
+            .form-info-card { grid-template-columns: 1fr; }
+            .form-course-card ul { grid-template-columns: 1fr; }
+            .form-table td { display: block; width: 100% !important; }
+            .fee-card-header { flex-direction: column; align-items: flex-start; }
+            .fee-course-list { grid-template-columns: 1fr; }
+            .fees-info-grid { grid-template-columns: 1fr; }
+            .radio-group { flex-direction: column; align-items: flex-start; }
         }
         @media (max-width: 480px) {
             .hero h1 { font-size: 1.8rem; }
@@ -504,6 +907,8 @@
             .why-grid { grid-template-columns: 1fr; }
             .form-container { padding: 20px 15px; }
             .nav-logo span { display: none; }
+            .fee-card-header h3 { font-size: 1rem; }
+            .fee-amount { font-size: 0.85rem; padding: 6px 16px; }
         }
     </style>
 </head>
@@ -532,6 +937,7 @@
                 <a href="#home" class="active">Home</a>
                 <a href="#about">About</a>
                 <a href="#programs">Programs</a>
+                <a href="#fees">Fees</a>
                 <a href="#support">Support</a>
                 <a href="#campuses">Campuses</a>
                 <a href="#gallery">Gallery</a>
@@ -548,12 +954,13 @@
         <div class="container hero-grid">
             <div class="hero-content">
                 <div class="hero-motto">Agency for Change</div>
-                <h1>Practical Skills for Employment & Entrepreneurship</h1>
-                <p>Empowering Malawian youth through hands-on technical and vocational education.</p>
+                <h1>Unlock Your Future with Luso Technical College</h1>
+                <p>8 years of excellence in technical education. Registered international exam centre with ABMA, ABE, ICM, City & Guilds, offering practical diplomas and skills training.</p>
                 <div class="hero-buttons">
-                    <button type="button" class="btn btn-blue" onclick="downloadFilledForm()"><i class="fas fa-download"></i> Download Form</button>
+                    <button type="button" class="btn btn-blue" onclick="downloadBlankForm()"><i class="fas fa-file-pdf"></i> Download Registration PDF</button>
+                    <button type="button" class="btn btn-primary" onclick="downloadFilledForm()"><i class="fas fa-download"></i> Download Filled Form</button>
                     <button type="button" class="btn btn-whatsapp" onclick="sendApplicationToWhatsApp()"><i class="fab fa-whatsapp"></i> WhatsApp Us</button>
-                    <button type="button" class="btn btn-primary" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})"><i class="fas fa-paper-plane"></i> Apply Now</button>
+                    <button type="button" class="btn btn-outline" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})"><i class="fas fa-paper-plane"></i> Apply Now</button>
                 </div>
                 <div class="hero-stats">
                     <div class="hero-stat"><strong>14</strong><span>Hands-on Programs</span></div>
@@ -564,6 +971,30 @@
             <div class="hero-image-card fade-in">
                 <img src="DIPLOMA.jpg" alt="Students learning at Luso Technical College">
                 <div class="hero-image-caption">Discover real workshop experience, practical classes, and campus life designed for modern learners.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUICK FACTS -->
+    <section class="section-padding" style="background: #f7f9fd;">
+        <div class="container">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;">
+                <div style="padding:25px;background:white;border-radius:16px;box-shadow:var(--shadow);">
+                    <h3 style="color:var(--primary-blue);margin-bottom:12px;">8 Years of Excellence</h3>
+                    <p style="color:var(--text-gray);font-size:0.95rem;line-height:1.8;">Luso Technical College has trained Malawians for real careers with strong results, practical skill development, and outstanding pass rates.</p>
+                </div>
+                <div style="padding:25px;background:white;border-radius:16px;box-shadow:var(--shadow);">
+                    <h3 style="color:var(--primary-blue);margin-bottom:12px;">International Exam Centre</h3>
+                    <p style="color:var(--text-gray);font-size:0.95rem;line-height:1.8;">Registered centre for ABMA, ABE, ICM, City & Guilds and recognized for diplomas and certificates across Malawi and beyond.</p>
+                </div>
+                <div style="padding:25px;background:white;border-radius:16px;box-shadow:var(--shadow);">
+                    <h3 style="color:var(--primary-blue);margin-bottom:12px;">Flexible Study Options</h3>
+                    <p style="color:var(--text-gray);font-size:0.95rem;line-height:1.8;">Regular classes Monday–Friday, weekend classes Saturday–Sunday, and ODL online distance learning for study from school, home, or anywhere.</p>
+                </div>
+                <div style="padding:25px;background:white;border-radius:16px;box-shadow:var(--shadow);">
+                    <h3 style="color:var(--primary-blue);margin-bottom:12px;">Open to Everyone</h3>
+                    <p style="color:var(--text-gray);font-size:0.95rem;line-height:1.8;">Informal skills courses are open to anyone who can read and write, with at least 50% practical work to make you job-ready fast.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -599,84 +1030,272 @@
             <p class="section-subtitle">Choose from our wide range of practical, career-oriented programs designed to give you job-ready skills.</p>
             <div class="programs-grid">
                 <div class="program-card fade-in">
-                    <div class="program-card-image"><img src="CHOICES.jpg" alt="Electrical Installation" onerror="this.src='DIPLOMA.jpg'"></div>
+                    <div class="program-card-image"><img src="ELECTRICAL.jpg" alt="Electrical Installation"></div>
                     <div class="program-card-content">
                         <h3>Electrical Installation</h3>
+                        <div class="program-image-label">Image: ELECTRICAL.jpg</div>
                         <p>Master the skills of electrical wiring, installation, and maintenance for residential and commercial applications.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Electrical Installation')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="PUMBING.jpg" alt="Plumbing"></div>
                     <div class="program-card-content">
                         <h3>Plumbing</h3>
+                        <div class="program-image-label">Image: PUMBING.jpg</div>
                         <p>Learn modern plumbing techniques, pipe fitting, water supply systems, and sanitation infrastructure.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Plumbing')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="CARPENTRY AND JOINERY.jpg" alt="Carpentry & Joinery"></div>
                     <div class="program-card-content">
                         <h3>Carpentry & Joinery</h3>
+                        <div class="program-image-label">Image: CARPENTRY AND JOINERY.jpg</div>
                         <p>Develop expertise in woodworking, furniture making, construction carpentry, and fine joinery.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Carpentry & Joinery')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="HOTEL MANAGEMENT.jpg" alt="Hospitality"></div>
                     <div class="program-card-content">
                         <h3>Hospitality</h3>
+                        <div class="program-image-label">Image: HOTEL MANAGEMENT.jpg</div>
                         <p>Gain skills in hotel management, customer service, front office operations, and event management.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Hospitality')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="TAILORING.jpg" alt="Fashion & Design"></div>
                     <div class="program-card-content">
                         <h3>Fashion & Design</h3>
+                        <div class="program-image-label">Image: TAILORING.jpg</div>
                         <p>Learn garment construction, fashion design, pattern making, and textile art from industry experts.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Tailoring & Fashion Design')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="ICT AND COMPUTER USE.jpg" alt="ICT and Computer Use"></div>
                     <div class="program-card-content">
                         <h3>ICT and Computer Use</h3>
+                        <div class="program-image-label">Image: ICT AND COMPUTER USE.jpg</div>
                         <p>Build digital literacy, computer applications, programming basics, and IT support skills.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('ICT Computer Use')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="COSMETOLOGY.jpg" alt="Cosmetology & Beauty"></div>
                     <div class="program-card-content">
                         <h3>Cosmetology & Beauty</h3>
+                        <div class="program-image-label">Image: COSMETOLOGY.jpg</div>
                         <p>Study hair care, skincare, makeup artistry, salon management, and beauty therapy techniques.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Cosmetology (Makeup, Nails, Hair)')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="DIPLOMA IN FOOD PRODUCTION.jpg" alt="Food Production"></div>
                     <div class="program-card-content">
                         <h3>Food Production</h3>
+                        <div class="program-image-label">Image: DIPLOMA IN FOOD PRODUCTION.jpg</div>
                         <p>Learn commercial cooking, food safety, nutrition, kitchen management, and catering services.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Food Production')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
                     <div class="program-card-image"><img src="AUTOMOBILE MECHANICS.jpg" alt="Auto Mobile Mechanics"></div>
                     <div class="program-card-content">
                         <h3>Auto Mobile Mechanics</h3>
+                        <div class="program-image-label">Image: AUTOMOBILE MECHANICS.jpg</div>
                         <p>Learn automotive repair, engine diagnostics, vehicle maintenance, and mechanical systems troubleshooting.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Automobile Mechanics')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
                 </div>
                 <div class="program-card fade-in">
-                    <div class="program-card-image"><img src="CHOICES.jpg" alt="Entrepreneurship"></div>
+                    <div class="program-card-image"><img src="BUSINESS MANAGEMENT.jpg" alt="Entrepreneurship Skills"></div>
                     <div class="program-card-content">
                         <h3>Entrepreneurship Skills</h3>
+                        <div class="program-image-label">Image: BUSINESS MANAGEMENT.jpg</div>
                         <p>Develop business acumen, financial literacy, marketing skills, and learn how to start and grow a business.</p>
                         <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Business Management')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
                     </div>
+                </div>
+
+                <div class="program-card fade-in">
+                    <div class="program-card-image"><img src="JOURNALISM.jpg" alt="Journalism"></div>
+                    <div class="program-card-content">
+                        <h3>Journalism</h3>
+                        <div class="program-image-label">Image: JOURNALISM.jpg</div>
+                        <p>Train in reporting, news writing, multimedia storytelling, and ethical journalism for modern media.</p>
+                        <span class="program-tag">Diploma</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Journalism')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card fade-in">
+                    <div class="program-card-image"><img src="SECRETARIAL STUDIES.jpg" alt="Secretarial Studies"></div>
+                    <div class="program-card-content">
+                        <h3>Secretarial Studies</h3>
+                        <div class="program-image-label">Image: SECRETARIAL STUDIES.jpg</div>
+                        <p>Learn office administration, shorthand, professional communication, and secretarial skills.</p>
+                        <span class="program-tag">Certificate</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Secretarial')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card fade-in">
+                    <div class="program-card-image"><img src="BUSINESS MANAGEMENT.jpg" alt="Business Management"></div>
+                    <div class="program-card-content">
+                        <h3>Business Management</h3>
+                        <div class="program-image-label">Image: BUSINESS MANAGEMENT.jpg</div>
+                        <p>Study fundamentals of business, management principles, entrepreneurship, and small business operations.</p>
+                        <span class="program-tag">Diploma</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Business Administration')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="program-card fade-in">
+                    <div class="program-card-image"><img src="PUBLIC HEALTH.jpg" alt="Public Health"></div>
+                    <div class="program-card-content">
+                        <h3>Public Health</h3>
+                        <div class="program-image-label">Image: PUBLIC HEALTH.jpg</div>
+                        <p>Cover public health basics, community health, disease prevention, and health promotion strategies.</p>
+                        <span class="program-tag">Diploma</span>
+                        <div class="program-actions" style="margin-top:12px;">
+                            <button type="button" class="btn btn-primary" onclick="applyForProgram('Public Health')"><i class="fas fa-user-graduate"></i> Apply</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FEES SECTION (ENHANCED) ===== -->
+    <section class="fees-section section-padding" id="fees">
+        <div class="container">
+            <div class="fees-header">
+                <h2>Course Fees & Payment Information</h2>
+                <p>Affordable, quality education with flexible payment options. Choose the program that fits your career goals and budget.</p>
+                <div class="reg-fee-badge"><i class="fas fa-file-invoice"></i> Registration Fee: K10,000 (Non-refundable)</div>
+            </div>
+
+            <div class="fees-grid">
+                <!-- 2-Month Informal -->
+                <div class="fee-card">
+                    <div class="fee-card-header">
+                        <h3><i class="fas fa-hourglass-half"></i> 2-Month Informal Courses</h3>
+                        <span class="fee-amount">K150,000</span>
+                    </div>
+                    <div class="fee-card-body">
+                        <div class="fee-course-list">
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> ICT Computer Use</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Tailoring & Fashion Design</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Electrical & Solar Installation</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Video Production</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Electronics Repairing</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Computer Repairing</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Graphic Designing</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Audio Production</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Phone Repairing</div>
+                        </div>
+                    </div>
+                    <div class="fee-card-footer">
+                        <span class="duration-tag"><i class="far fa-clock"></i> 2 Months</span>
+                        <span>Open to anyone who can read and write — 50% practical work</span>
+                    </div>
+                </div>
+
+                <!-- 3-Month Courses -->
+                <div class="fee-card" style="border-left-color: var(--blue-accent);">
+                    <div class="fee-card-header">
+                        <h3><i class="fas fa-calendar-alt"></i> 3-Month Certificates</h3>
+                        <span class="fee-amount">K250,000 / term</span>
+                    </div>
+                    <div class="fee-card-body">
+                        <div class="fee-course-list">
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Cosmetology (Makeup, Nails, Hair)</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Hospitality / Hotel Management</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Plumbing</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Welding & Fabrication</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Automobile Mechanics</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Aircon & Refrigeration</div>
+                        </div>
+                    </div>
+                    <div class="fee-card-footer">
+                        <span class="duration-tag"><i class="far fa-clock"></i> 3 Months</span>
+                        <span>Practical certificate programs with hands-on workshop training</span>
+                    </div>
+                </div>
+
+                <!-- Diploma Courses -->
+                <div class="fee-card" style="border-left-color: var(--primary-blue);">
+                    <div class="fee-card-header">
+                        <h3><i class="fas fa-graduation-cap"></i> Diploma Programs</h3>
+                        <span class="fee-amount">K250,000 / semester</span>
+                    </div>
+                    <div class="fee-card-body">
+                        <div class="fee-course-list">
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Business Administration</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Journalism (ABMA)</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Secretarial (ABMA)</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Human Resource (ABE)</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Public Health (ABMA)</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Electrical Engineering (City & Guilds)</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Food & Nutrition (ABMA)</div>
+                            <div class="fee-course-item"><i class="fas fa-check-circle"></i> Community Development (ABMA)</div>
+                        </div>
+                    </div>
+                    <div class="fee-card-footer">
+                        <span class="duration-tag"><i class="far fa-clock"></i> Per Semester</span>
+                        <span>Internationally recognized diplomas from ABMA, ABE, City & Guilds</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fees-info-box">
+                <h4><i class="fas fa-info-circle"></i> Important Payment Information</h4>
+                <div class="fees-info-grid">
+                    <div class="fees-info-item"><i class="fas fa-check-circle"></i> <span><strong>Registration Fee:</strong> K10,000 (Non-refundable) for all courses</span></div>
+                    <div class="fees-info-item"><i class="fas fa-check-circle"></i> <span><strong>Bank Account:</strong> National Bank, Account No: 1010530535</span></div>
+                    <div class="fees-info-item"><i class="fas fa-check-circle"></i> <span><strong>Exam Boards:</strong> ICM, BMEC, ABE, City & Guilds, TEVETA</span></div>
+                    <div class="fees-info-item"><i class="fas fa-check-circle"></i> <span><strong>Payment Plans:</strong> Flexible arrangements available upon request</span></div>
+                    <div class="fees-info-item"><i class="fas fa-check-circle"></i> <span><strong>Contact:</strong> <a href="tel:+265995545449" style="color:var(--primary-blue);font-weight:500;">+265 995 545 449</a> | <a href="mailto:lusomalawi2023@gmail.com" style="color:var(--primary-blue);font-weight:500;">lusomalawi2023@gmail.com</a></span></div>
+                    <div class="fees-info-item"><i class="fas fa-check-circle"></i> <span><strong>Account Name:</strong> Luso Technical College</span></div>
                 </div>
             </div>
         </div>
@@ -757,13 +1376,21 @@
             <p class="section-subtitle">See our students, workshops, and campus life in action.</p>
             <div class="gallery-grid">
                 <div class="gallery-item fade-in"><img src="DIPLOMA.jpg" alt="Students"><div class="gallery-overlay"><span>Students in Practical Training</span></div></div>
+                <div class="gallery-item fade-in"><img src="HOME.jpg" alt="Campus"><div class="gallery-overlay"><span>College Campus View</span></div></div>
+                <div class="gallery-item fade-in"><img src="CHOICES.jpg" alt="Choices"><div class="gallery-overlay"><span>Your Future Starts Here</span></div></div>
                 <div class="gallery-item fade-in"><img src="AUTOMOBILE MECHANICS.jpg" alt="Workshop"><div class="gallery-overlay"><span>Mechanics Workshop</span></div></div>
                 <div class="gallery-item fade-in"><img src="CARPENTRY AND JOINERY.jpg" alt="Carpentry"><div class="gallery-overlay"><span>Carpentry & Joinery Class</span></div></div>
+                <div class="gallery-item fade-in"><img src="ELECTRICAL.jpg" alt="Electrical"><div class="gallery-overlay"><span>Electrical Installation Workshop</span></div></div>
+                <div class="gallery-item fade-in"><img src="PUMBING.jpg" alt="Plumbing"><div class="gallery-overlay"><span>Plumbing Training</span></div></div>
                 <div class="gallery-item fade-in"><img src="HOTEL MANAGEMENT.jpg" alt="Hospitality"><div class="gallery-overlay"><span>Hospitality Training</span></div></div>
                 <div class="gallery-item fade-in"><img src="COSMETOLOGY.jpg" alt="Cosmetology"><div class="gallery-overlay"><span>Cosmetology & Beauty Class</span></div></div>
                 <div class="gallery-item fade-in"><img src="TAILORING.jpg" alt="Fashion"><div class="gallery-overlay"><span>Fashion & Design Workshop</span></div></div>
                 <div class="gallery-item fade-in"><img src="DIPLOMA IN FOOD PRODUCTION.jpg" alt="Food"><div class="gallery-overlay"><span>Food Production Class</span></div></div>
                 <div class="gallery-item fade-in"><img src="ICT AND COMPUTER USE.jpg" alt="ICT"><div class="gallery-overlay"><span>ICT Computer Lab</span></div></div>
+                <div class="gallery-item fade-in"><img src="BUSINESS MANAGEMENT.jpg" alt="Business"><div class="gallery-overlay"><span>Business Management Class</span></div></div>
+                <div class="gallery-item fade-in"><img src="JOURNALISM.jpg" alt="Journalism"><div class="gallery-overlay"><span>Journalism & Media Training</span></div></div>
+                <div class="gallery-item fade-in"><img src="PUBLIC HEALTH.jpg" alt="Public Health"><div class="gallery-overlay"><span>Public Health Studies</span></div></div>
+                <div class="gallery-item fade-in"><img src="SECRETARIAL STUDIES.jpg" alt="Secretarial"><div class="gallery-overlay"><span>Secretarial Studies</span></div></div>
             </div>
         </div>
     </section>
@@ -790,176 +1417,215 @@
         </div>
     </section>
 
-    <!-- APPLICATION FORM -->
+    <!-- REGISTRATION FORM -->
     <section class="application section-padding" id="apply">
         <div class="container">
-            <h2 class="section-title">Apply Now</h2>
-            <p class="section-subtitle">Ready to transform your future? Complete the application form below and take the first step toward a brighter career.</p>
+            <h2 class="section-title">Luso Technical College Registration Form</h2>
+            <p class="section-subtitle">Register now for our 2026 intake. Complete the form below and submit your details via WhatsApp or download your filled application.</p>
             <div class="form-container" id="formContainer">
-                <div class="form-step-indicator" id="stepIndicator">
-                    <div class="step-dot active" data-step="1"></div>
-                    <div class="step-dot" data-step="2"></div>
-                    <div class="step-dot" data-step="3"></div>
-                    <div class="step-dot" data-step="4"></div>
+                <!-- College info card -->
+                <div class="form-info-card">
+                    <div><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> P.O. BOX 5001, LILONGWE</div>
+                    <div><i class="fas fa-phone"></i> <strong>Phone:</strong> +265 995 545 449</div>
+                    <div><i class="fas fa-envelope"></i> <strong>Email:</strong> info@lusotechcollege.com</div>
+                    <div><i class="fas fa-university"></i> <strong>Bank:</strong> NBS</div>
+                    <div><i class="fas fa-user"></i> <strong>Account Name:</strong> Luso Technical College</div>
+                    <div><i class="fas fa-hashtag"></i> <strong>Account No:</strong> 1000200649</div>
                 </div>
 
-                <!-- Step 1: Personal Information -->
-                <div class="form-step active" data-step="1">
-                    <h3>Personal Information</h3>
-                    <p>Please provide your personal details so we can get to know you.</p>
-                    <div class="form-group">
-                        <label for="fullName">Full Name <span class="required">*</span></label>
-                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
-                        <div class="error-message" id="fullNameError">Please enter your full name.</div>
+                <!-- Course options cards -->
+                <div class="form-courses-container">
+                    <div class="form-course-card">
+                        <h4><i class="fas fa-hourglass-half" style="color:var(--gold);"></i> 2-Month Informal Courses <span class="fee-badge">K150,000 each</span></h4>
+                        <ul>
+                            <li>ICT Computer Use</li>
+                            <li>Tailoring & Fashion Design</li>
+                            <li>Electrical & Solar Installation</li>
+                            <li>Video Production</li>
+                            <li>Electronics Repairing</li>
+                            <li>Computer Repairing</li>
+                            <li>Graphic Designing</li>
+                            <li>Audio Production</li>
+                            <li>Phone Repairing</li>
+                        </ul>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="dob">Date of Birth <span class="required">*</span></label>
-                            <input type="date" id="dob" name="dob" required>
-                            <div class="error-message" id="dobError">Please select your date of birth.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="gender">Gender <span class="required">*</span></label>
-                            <select id="gender" name="gender" required>
-                                <option value="">Select gender</option>
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                            </select>
-                            <div class="error-message" id="genderError">Please select your gender.</div>
-                        </div>
+                    <div class="form-course-card">
+                        <h4><i class="fas fa-calendar-alt" style="color:var(--blue-accent);"></i> 3-Month Courses <span class="fee-badge">K250,000 per term</span></h4>
+                        <ul>
+                            <li>Cosmetology (Makeup, Nails, Hair)</li>
+                            <li>Hospitality / Hotel Management (Catering)</li>
+                            <li>Plumbing</li>
+                            <li>Welding & Fabrication</li>
+                            <li>Automobile Mechanics</li>
+                            <li>Aircon & Refrigeration</li>
+                        </ul>
                     </div>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">Phone Number (WhatsApp preferred) <span class="required">*</span></label>
-                            <input type="tel" id="phone" name="phone" placeholder="+265 XXX XXX XXX" required>
-                            <div class="error-message" id="phoneError">Please enter a valid phone number.</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
-                            <div class="error-message" id="emailError">Please enter a valid email address.</div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="address">Home Address <span class="required">*</span></label>
-                        <input type="text" id="address" name="address" placeholder="Enter your home address" required>
-                        <div class="error-message" id="addressError">Please enter your home address.</div>
-                    </div>
-                    <div class="form-buttons">
-                        <div></div>
-                        <button type="button" class="btn btn-blue" onclick="nextStep(1)">Next <i class="fas fa-arrow-right"></i></button>
+                    <div class="form-course-card">
+                        <h4><i class="fas fa-graduation-cap" style="color:var(--primary-blue);"></i> Diploma Programs <span class="fee-badge">K250,000 per semester</span></h4>
+                        <ul>
+                            <li>Business Administration</li>
+                            <li>Journalism - ABMA</li>
+                            <li>Secretarial - ABMA</li>
+                            <li>Human Resource - ABE</li>
+                            <li>Public Health - ABMA</li>
+                            <li>Electrical Engineering - City & Guilds</li>
+                            <li>Food & Nutrition - ABMA</li>
+                            <li>Community Development - ABMA</li>
+                        </ul>
                     </div>
                 </div>
 
-                <!-- Step 2: Course Selection -->
-                <div class="form-step" data-step="2">
-                    <h3>Course Selection</h3>
-                    <p>Choose the program you want to study at Luso Technical College.</p>
-                    <div class="form-group">
-                        <label for="course">Select Course <span class="required">*</span></label>
-                        <select id="course" name="course" required>
-                            <option value="">-- Select a program --</option>
-                            <option value="Electrical Installation">Electrical Installation</option>
-                            <option value="Plumbing">Plumbing</option>
-                            <option value="Carpentry & Joinery">Carpentry & Joinery</option>
-                            <option value="Hospitality">Hospitality</option>
-                            <option value="Fashion & Design">Fashion & Design</option>
-                            <option value="ICT and Computer Use">ICT and Computer Use</option>
-                            <option value="Cosmetology & Beauty">Cosmetology & Beauty</option>
-                            <option value="Food Production">Food Production</option>
-                            <option value="Auto Mobile Mechanics">Auto Mobile Mechanics</option>
-                            <option value="Entrepreneurship Skills">Entrepreneurship Skills</option>
-                        </select>
-                        <div class="error-message" id="courseError">Please select a course.</div>
+                <form id="registrationForm">
+                    <div style="overflow-x:auto;">
+                        <table class="form-table">
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="firstName">First Name <span class="required">*</span></label>
+                                        <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                                        <div class="error-message" id="firstNameError">Please enter your first name.</div>
+                                    </td>
+                                    <td>
+                                        <label for="surname">Surname <span class="required">*</span></label>
+                                        <input type="text" id="surname" name="surname" placeholder="Surname" required>
+                                        <div class="error-message" id="surnameError">Please enter your surname.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="dob">Date of Birth <span class="required">*</span></label>
+                                        <input type="date" id="dob" name="dob" required>
+                                        <div class="error-message" id="dobError">Please enter your date of birth.</div>
+                                    </td>
+                                    <td>
+                                        <label for="startDate">Starting Date <span class="required">*</span></label>
+                                        <input type="date" id="startDate" name="startDate" required>
+                                        <div class="error-message" id="startDateError">Please select your preferred start date.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="maritalStatus">Marital Status <span class="required">*</span></label>
+                                        <select id="maritalStatus" name="maritalStatus" required>
+                                            <option value="">Select marital status</option>
+                                            <option value="Single">Single</option>
+                                            <option value="Married">Married</option>
+                                            <option value="Divorced">Divorced</option>
+                                            <option value="Widowed">Widowed</option>
+                                        </select>
+                                        <div class="error-message" id="maritalStatusError">Please select your marital status.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="phone">Personal Phone Number <span class="required">*</span></label>
+                                        <input type="tel" id="phone" name="phone" placeholder="+265 XXX XXX XXX" required>
+                                        <div class="error-message" id="phoneError">Please enter your phone number.</div>
+                                    </td>
+                                    <td>
+                                        <label for="guardian">Guardian / Relative <span class="required">*</span></label>
+                                        <input type="text" id="guardian" name="guardian" placeholder="Guardian or relative name" required>
+                                        <div class="error-message" id="guardianError">Please enter guardian or relative.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="homeVillage">Street / Village / T.A <span class="required">*</span></label>
+                                        <input type="text" id="homeVillage" name="homeVillage" placeholder="Street / Village / T.A" required>
+                                        <div class="error-message" id="homeVillageError">Please enter your village or street.</div>
+                                    </td>
+                                    <td>
+                                        <label for="course">Course Applying For <span class="required">*</span></label>
+                                        <select id="course" name="course" required>
+                                            <option value="">-- Select a program --</option>
+                                            <optgroup label="2-Month Informal Courses - K150,000">
+                                                <option value="ICT Computer Use - K150,000">ICT Computer Use</option>
+                                                <option value="Tailoring & Fashion Design - K150,000">Tailoring & Fashion Design</option>
+                                                <option value="Electrical and Solar Installation - K150,000">Electrical and Solar Installation</option>
+                                                <option value="Video Production - K150,000">Video Production</option>
+                                                <option value="Electronics Repairing - K150,000">Electronics Repairing</option>
+                                                <option value="Computer Repairing - K150,000">Computer Repairing</option>
+                                                <option value="Graphic Designing - K150,000">Graphic Designing</option>
+                                                <option value="Audio Production - K150,000">Audio Production</option>
+                                                <option value="Phone Repairing - K150,000">Phone Repairing</option>
+                                            </optgroup>
+                                            <optgroup label="3-Month Courses - K250,000 per term">
+                                                <option value="Cosmetology (Makeup, Nails, Hair) - K250,000">Cosmetology (Makeup, Nails, Hair)</option>
+                                                <option value="Hospitality/Hotel Management (Catering) - K250,000">Hospitality/Hotel Management (Catering) - ICM</option>
+                                                <option value="Plumbing - K250,000">Plumbing</option>
+                                                <option value="Welding and Fabrication - K250,000">Welding and Fabrication</option>
+                                                <option value="Automobile Mechanics - K250,000">Automobile Mechanics</option>
+                                                <option value="Aircon & Refrigeration - K250,000">Aircon & Refrigeration</option>
+                                            </optgroup>
+                                            <optgroup label="Diploma Courses - K250,000 per semester">
+                                                <option value="Business Administration - K250,000">Business Administration</option>
+                                                <option value="Journalism - ABMA - K250,000">Journalism - ABMA</option>
+                                                <option value="Secretarial - ABMA - K250,000">Secretarial - ABMA</option>
+                                                <option value="Human Resource - ABE - K250,000">Human Resource - ABE</option>
+                                                <option value="Public Health - ABMA - K250,000">Public Health - ABMA</option>
+                                                <option value="Electrical Engineering - City & Guilds - K250,000">Electrical Engineering - City & Guilds</option>
+                                                <option value="Food & Nutrition - ABMA - K250,000">Food & Nutrition - ABMA</option>
+                                                <option value="Community Development - ABMA - K250,000">Community Development - ABMA</option>
+                                            </optgroup>
+                                        </select>
+                                        <div class="error-message" id="courseError">Please select a course.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label>Branch <span class="required">*</span></label>
+                                        <div class="radio-group">
+                                            <label class="radio-label"><input type="radio" name="branch" value="Lilongwe"> Lilongwe Campus</label>
+                                            <label class="radio-label"><input type="radio" name="branch" value="Blantyre"> Blantyre Campus</label>
+                                        </div>
+                                        <div class="error-message" id="branchError">Please select your preferred branch.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="email">Email Address <span class="required">*</span></label>
+                                        <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                                        <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                                    </td>
+                                    <td>
+                                        <label for="address">Home Address <span class="required">*</span></label>
+                                        <input type="text" id="address" name="address" placeholder="Home Address" required>
+                                        <div class="error-message" id="addressError">Please enter your address.</div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <label for="motivation">Motivation / Why do you want to study this course? <span class="required">*</span></label>
+                                        <textarea id="motivation" name="motivation" rows="4" placeholder="Tell us why you are interested in this program and how it fits your career goals..." required style="width:100%;padding:12px 16px;border:2px solid #e2e8f0;border-radius:8px;font-size:0.9rem;font-family:inherit;transition:var(--transition);background:var(--white);color:var(--text-dark);resize:vertical;"></textarea>
+                                        <div class="error-message" id="motivationError">Please tell us your motivation for applying.</div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
-                    <div class="form-buttons">
-                        <button type="button" class="btn btn-prev" onclick="prevStep(2)"><i class="fas fa-arrow-left"></i> Back</button>
-                        <button type="button" class="btn btn-blue" onclick="nextStep(2)">Next <i class="fas fa-arrow-right"></i></button>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary" onclick="submitApplication()"><i class="fas fa-paper-plane"></i> Submit Application</button>
+                        <button type="button" class="btn btn-blue" onclick="downloadFilledForm()"><i class="fas fa-download"></i> Download Filled Form</button>
+                        <button type="button" class="btn btn-whatsapp" onclick="sendApplicationToWhatsApp()"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
                     </div>
+                </form>
+
+                <div class="passport-notice">
+                    <i class="fas fa-camera"></i>
+                    <div><strong>📷 Passport Photo Required:</strong> Please include your passport photo when sending the application via WhatsApp. You can attach the image directly in the WhatsApp chat after it opens.</div>
                 </div>
 
-                <!-- Step 3: Education Background & Motivation -->
-                <div class="form-step" data-step="3">
-                    <h3>Education & Motivation</h3>
-                    <p>Tell us about your background and why you want to join Luso Technical College.</p>
-                    <div class="form-group">
-                        <label for="qualification">Highest Qualification <span class="required">*</span></label>
-                            <select id="qualification" name="qualification" required>
-                                <option value="">Select qualification</option>
-                                <option value="MSCE">MSCE (Malawi School Certificate of Education)</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        <div class="error-message" id="qualificationError">Please select your highest qualification.</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="school">School Attended <span class="required">*</span></label>
-                        <input type="text" id="school" name="school" placeholder="Enter name of school you attended" required>
-                        <div class="error-message" id="schoolError">Please enter the school you attended.</div>
-                    </div>
-                    <div class="form-group">
-                        <label for="motivation">Why do you want to join Luso Technical College? <span class="required">*</span></label>
-                        <textarea id="motivation" name="motivation" placeholder="Share your reasons for wanting to study at Luso Technical College..." required></textarea>
-                        <div class="error-message" id="motivationError">Please tell us why you want to join.</div>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="button" class="btn btn-prev" onclick="prevStep(3)"><i class="fas fa-arrow-left"></i> Back</button>
-                        <button type="button" class="btn btn-blue" onclick="nextStep(3)">Next <i class="fas fa-arrow-right"></i></button>
-                    </div>
-                </div>
-
-                <!-- Step 4: Upload Photo & Submit -->
-                <div class="form-step" data-step="4">
-                    <h3>Upload Your Photo</h3>
-                    <p>Please upload your passport photo. It will appear on your downloaded application form.</p>
-                    <div class="form-group">
-                        <label>Upload Passport Photo <span class="required">*</span></label>
-                        <div class="file-upload-area" id="passportUpload" onclick="document.getElementById('passportInput').click()">
-                            <i class="fas fa-camera"></i>
-                            <p>Click to upload your passport photo</p>
-                            <p class="file-types">JPG, PNG • Max 2MB</p>
-                        </div>
-                        <input type="file" id="passportInput" accept=".jpg,.jpeg,.png" style="display:none" onchange="handleFileUpload('passport')">
-                        <div class="passport-preview-container" id="passportPreviewContainer">
-                            <img id="passportPreview" src="" alt="Passport Photo">
-                            <span class="remove-preview" onclick="removeFile('passport')"><i class="fas fa-times"></i></span>
-                        </div>
-                        <div class="file-name-display" id="passportFileName">
-                            <i class="fas fa-check-circle"></i>
-                            <span id="passportFileNameText"></span>
-                            <span class="remove-file" onclick="removeFile('passport')"><i class="fas fa-times"></i></span>
-                        </div>
-                        <div class="error-message" id="passportError">Please upload your passport photo.</div>
-                    </div>
-                    <p style="font-size:0.85rem;color:var(--text-light);margin:20px 0;padding:12px;background:var(--off-white);border-radius:8px;">
-                        <i class="fas fa-info-circle" style="color:var(--blue-accent);"></i> By submitting this application, you agree to our terms and conditions. Your data will be handled securely.
-                    </p>
-                    <div class="form-buttons">
-                        <button type="button" class="btn btn-prev" onclick="prevStep(4)"><i class="fas fa-arrow-left"></i> Back</button>
-                        <div style="display:flex;gap:10px;width:100%;justify-content:flex-end;">
-                            <button type="button" class="btn btn-blue" onclick="downloadFilledForm()"><i class="fas fa-download"></i> Download Filled Form</button>
-                            <button type="button" class="btn btn-primary" onclick="submitApplication()">
-                                <i class="fas fa-paper-plane"></i> Submit Application
-                            </button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Submission Success -->
                 <div class="submission-success" id="submissionSuccess">
                     <div class="success-icon"><i class="fas fa-check"></i></div>
-                    <h2><i class="fas fa-check-circle" style="color:#27ae60;"></i> Application Submitted Successfully!</h2>
-                    <p>Your application has been received by Luso Technical College. Our admissions team will review your details and contact you within 2-3 business days.</p>
+                    <h2>Application Submitted Successfully!</h2>
+                    <p>Your registration has been received. Our admissions team will contact you within 2-3 business days.</p>
                     <div class="success-actions">
                         <button type="button" class="btn btn-primary" onclick="downloadFilledForm()"><i class="fas fa-download"></i> Download Application</button>
                         <button type="button" class="btn btn-whatsapp" onclick="sendApplicationToWhatsApp()"><i class="fab fa-whatsapp"></i> Send to WhatsApp</button>
                         <a href="#home" class="btn btn-outline" style="border-color:var(--primary-blue);color:var(--primary-blue);"><i class="fas fa-home"></i> Back to Home</a>
                     </div>
-                        <p style="margin-top:15px;font-size:0.85rem;color:var(--text-light);">
-                            <i class="fas fa-envelope"></i> Please check your email for a confirmation message from us.
-                        </p>
-                        <p id="emailStatus" style="margin-top:12px;font-size:0.9rem;color:var(--text-dark);display:none"></p>
-                        <p id="whatsappStatus" style="margin-top:8px;font-size:0.9rem;color:var(--text-dark);display:none"></p>
+                    <p style="margin-top:15px;font-size:0.9rem;color:var(--text-dark);" id="emailStatus"></p>
+                    <p style="margin-top:8px;font-size:0.9rem;color:var(--text-dark);" id="whatsappStatus"></p>
                 </div>
             </div>
         </div>
@@ -1020,6 +1686,7 @@
                         <li><a href="#home">Home</a></li>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#programs">Programs</a></li>
+                        <li><a href="#fees">Fees</a></li>
                         <li><a href="#apply">Apply Now</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
@@ -1094,6 +1761,14 @@
         }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+        // Radio button styling
+        document.querySelectorAll('.radio-label input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                document.querySelectorAll('.radio-label').forEach(label => label.classList.remove('selected'));
+                if (this.checked) this.closest('.radio-label').classList.add('selected');
+            });
+        });
+
         // Form state
         let currentStep = 1;
         let formData = {};
@@ -1128,23 +1803,47 @@
             document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(el => el.classList.remove('error'));
 
             if (step === 1) {
-                const fullName = document.getElementById('fullName').value.trim();
+                const firstName = document.getElementById('firstName').value.trim();
+                const surname = document.getElementById('surname').value.trim();
                 const dob = document.getElementById('dob').value;
-                const gender = document.getElementById('gender').value;
+                const startDate = document.getElementById('startDate').value;
+                const maritalStatus = document.getElementById('maritalStatus').value;
                 const phone = document.getElementById('phone').value.trim();
+                const guardian = document.getElementById('guardian').value.trim();
+                const homeVillage = document.getElementById('homeVillage').value.trim();
                 const email = document.getElementById('email').value.trim();
                 const address = document.getElementById('address').value.trim();
-                if (!fullName) { showError('fullName','fullNameError'); valid=false; }
+                if (!firstName) { showError('firstName','firstNameError'); valid=false; }
+                if (!surname) { showError('surname','surnameError'); valid=false; }
                 if (!dob) { showError('dob','dobError'); valid=false; }
-                if (!gender) { showError('gender','genderError'); valid=false; }
+                if (!startDate) { showError('startDate','startDateError'); valid=false; }
+                if (!maritalStatus) { showError('maritalStatus','maritalStatusError'); valid=false; }
                 if (!phone) { showError('phone','phoneError'); valid=false; }
+                if (!guardian) { showError('guardian','guardianError'); valid=false; }
+                if (!homeVillage) { showError('homeVillage','homeVillageError'); valid=false; }
                 if (!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email','emailError'); valid=false; }
                 if (!address) { showError('address','addressError'); valid=false; }
-                if (valid) { formData.fullName=fullName; formData.dob=dob; formData.gender=gender; formData.phone=phone; formData.email=email; formData.address=address; }
+                if (valid) {
+                    formData.firstName = firstName;
+                    formData.surname = surname;
+                    formData.dob = dob;
+                    formData.startDate = startDate;
+                    formData.maritalStatus = maritalStatus;
+                    formData.phone = phone;
+                    formData.guardian = guardian;
+                    formData.homeVillage = homeVillage;
+                    formData.email = email;
+                    formData.address = address;
+                }
             } else if (step === 2) {
                 const course = document.getElementById('course').value;
+                const branch = document.querySelector('input[name="branch"]:checked');
                 if (!course) { showError('course','courseError'); valid=false; }
-                if (valid) formData.course = course;
+                if (!branch) { document.getElementById('branchError').classList.add('show'); valid=false; }
+                if (valid) {
+                    formData.course = course;
+                    formData.branch = branch.value;
+                }
             } else if (step === 3) {
                 const qualification = document.getElementById('qualification').value;
                 const school = document.getElementById('school').value.trim();
@@ -1244,13 +1943,18 @@
             // read current form inputs so download reflects current values
             try {
                 const el = id => document.getElementById(id) ? document.getElementById(id).value : '';
-                formData.fullName = el('fullName') || formData.fullName || '';
+                formData.firstName = el('firstName') || formData.firstName || '';
+                formData.surname = el('surname') || formData.surname || '';
                 formData.dob = el('dob') || formData.dob || '';
-                formData.gender = el('gender') || formData.gender || '';
+                formData.startDate = el('startDate') || formData.startDate || '';
+                formData.maritalStatus = el('maritalStatus') || formData.maritalStatus || '';
                 formData.phone = el('phone') || formData.phone || '';
+                formData.guardian = el('guardian') || formData.guardian || '';
+                formData.homeVillage = el('homeVillage') || formData.homeVillage || '';
                 formData.email = el('email') || formData.email || '';
                 formData.address = el('address') || formData.address || '';
                 formData.course = el('course') || formData.course || '';
+                formData.branch = document.querySelector('input[name="branch"]:checked') ? document.querySelector('input[name="branch"]:checked').value : formData.branch || '';
                 formData.qualification = el('qualification') || formData.qualification || '';
                 formData.school = el('school') || formData.school || '';
                 formData.motivation = el('motivation') || formData.motivation || '';
@@ -1270,7 +1974,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luso Application - ${formData.fullName}</title>
+    <title>Luso Application - ${formData.firstName || ''} ${formData.surname || ''}</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: Arial, sans-serif; color: #333; padding: 40px; line-height: 1.6; }
@@ -1312,15 +2016,17 @@
     <div class="section">
         <div class="section-title">1. Personal Information</div>
         <table>
-            <tr><td class="label">Full Name</td><td class="value">${formData.fullName}</td></tr>
+            <tr><td class="label">First Name</td><td class="value">${formData.firstName}</td></tr>
+            <tr><td class="label">Surname</td><td class="value">${formData.surname}</td></tr>
             <tr><td class="label">Date of Birth</td><td class="value">${formData.dob}</td></tr>
-            <tr><td class="label">Gender</td><td class="value">${formData.gender}</td></tr>
+            <tr><td class="label">Starting Date</td><td class="value">${formData.startDate}</td></tr>
+            <tr><td class="label">Marital Status</td><td class="value">${formData.maritalStatus}</td></tr>
             <tr><td class="label">Phone (WhatsApp)</td><td class="value">${formData.phone}</td></tr>
+            <tr><td class="label">Guardian / Relative</td><td class="value">${formData.guardian}</td></tr>
+            <tr><td class="label">Home Village</td><td class="value">${formData.homeVillage}</td></tr>
             <tr><td class="label">Email</td><td class="value">${formData.email}</td></tr>
             <tr><td class="label">Home Address</td><td class="value">${formData.address}</td></tr>
-        </table>
-    </div>
-
+            <tr><td class="label">Branch</td><td class="value">${formData.branch}</td></tr>
     <div class="section">
         <div class="section-title">2. Course Selection</div>
         <table>
@@ -1329,7 +2035,18 @@
     </div>
 
     <div class="section">
-        <div class="section-title">3. Education Background</div>
+        <div class="section-title">3. Course Fees & Payment Information</div>
+        <table>
+            <tr><td class="label">Registration Fee</td><td class="value">K10,000 (Non-refundable)</td></tr>
+            <tr><td class="label">Course Duration</td><td class="value">See course details</td></tr>
+            <tr><td class="label">Payment Method</td><td class="value">Contact Admissions Team for options</td></tr>
+            <tr><td class="label">Account Details</td><td class="value">National Bank, Acc No: 1010530535</td></tr>
+        </table>
+        <p style="font-size:11px; color:#666; margin-top:10px;"><strong>2-Month Informal Courses:</strong> K150,000 | <strong>3-Month Courses:</strong> K250,000 per term | <strong>Diploma Courses:</strong> K250,000 per semester</p>
+    </div>
+
+    <div class="section">
+        <div class="section-title">4. Education Background</div>
         <table>
             <tr><td class="label">Highest Qualification</td><td class="value">${formData.qualification}</td></tr>
             <tr><td class="label">School Attended</td><td class="value">${formData.school}</td></tr>
@@ -1337,12 +2054,12 @@
     </div>
 
     <div class="section">
-        <div class="section-title">4. Motivation</div>
+        <div class="section-title">5. Motivation</div>
         <div class="motivation-box">"${formData.motivation}"</div>
     </div>
 
     <div class="section">
-        <div class="section-title">5. Passport Photo</div>
+        <div class="section-title">6. Passport Photo</div>
         <div style="margin-top:10px">${passportImgTag}</div>
     </div>
 
@@ -1357,7 +2074,8 @@
 </html>`;
 
             // Generate PDF from the form HTML using html2canvas + jsPDF (bundled with html2pdf)
-            const filename = `Luso_Application_${(formData.fullName||'applicant').replace(/\s+/g, '_')}.pdf`;
+            const applicantName = `${(formData.firstName||'applicant')} ${formData.surname||''}`.trim().replace(/\s+/g, '_') || 'applicant';
+            const filename = `Luso_Application_${applicantName}.pdf`;
             const container = document.createElement('div');
             container.style.position = 'fixed';
             container.style.left = '-9999px';
@@ -1426,10 +2144,11 @@
                     }).catch(err => { console.error('html2pdf failed', err); if (container.parentNode) document.body.removeChild(container); });
                 } else {
                     // final fallback: download HTML
+                    const applicantName = `${(formData.firstName||'applicant')} ${formData.surname||''}`.trim().replace(/\s+/g, '_') || 'applicant';
                     const blob = new Blob([formHTML], { type: 'text/html' });
                     const link = document.createElement('a');
                     link.href = URL.createObjectURL(blob);
-                    link.download = `Luso_Application_${(formData.fullName||'applicant').replace(/\s+/g, '_')}.html`;
+                    link.download = `Luso_Application_${applicantName}.html`;
                     document.body.appendChild(link);
                     link.click();
                     document.body.removeChild(link);
@@ -1438,6 +2157,95 @@
                 }
             } catch (err) {
                 console.error('Unexpected error generating PDF', err);
+                if (container.parentNode) document.body.removeChild(container);
+            }
+        }
+
+        function downloadBlankForm() {
+            const blankHTML = `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luso Technical College Registration Form</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; color: #222; padding: 30px; line-height: 1.6; }
+        .header { text-align: center; margin-bottom: 20px; }
+        .header h1 { margin-bottom: 6px; font-size: 24px; color: #1a3a6b; }
+        .header p { font-size: 13px; color: #555; }
+        .section { margin-top: 18px; }
+        .section-title { font-size: 14px; font-weight: bold; color: #1a3a6b; margin-bottom: 10px; text-transform: uppercase; }
+        table { width: 100%; border-collapse: collapse; }
+        td { vertical-align: top; padding: 8px 0; font-size: 12px; }
+        .label { width: 180px; color: #555; font-weight: bold; }
+        .line { display: inline-block; border-bottom: 1px solid #555; width: 70%; min-height: 16px; }
+        .note { font-size: 11px; color: #555; margin-top: 8px; }
+        .footer { margin-top: 28px; font-size: 11px; color: #555; }
+        .print-btn { display: block; width: 260px; margin: 24px auto 0; padding: 12px; text-align: center; background: #1a3a6b; color: #fff; border-radius: 6px; text-decoration: none; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>LUSO TECHNICAL COLLEGE</h1>
+        <p>2026 Registration Form</p>
+        <p>P.O. BOX 5001, Lilongwe | PHONE: 0995545449 / 0888114412 | EMAIL: lusomalawi2023@gmail.com</p>
+    </div>
+    <div class="section">
+        <div class="section-title">Course Fees</div>
+        <table>
+            <tr><td class="label">K150,000 Courses – 2 Months (Informal)</td><td class="value">ICT Computer Use, Tailoring & Fashion Design, Electrical and Solar Installation, Video Production, Electronics Repairing, Computer Repairing, Graphic Designing, Audio Production, Phone Repairing</td></tr>
+            <tr><td class="label">K250,000 Per Term / 3 Months</td><td class="value">Cosmetology (Makeup, Nails, Hair, etc.), Hospitality/Hotel Management (Catering) - ICM, Plumbing, Welding and Fabrication, Automobile Mechanics, Aircon & Refrigeration</td></tr>
+            <tr><td class="label">Diploma Courses – K250,000 per semester</td><td class="value">Business Administration, Journalism (ABMA), Secretarial (ABMA), Human Resource (ABE), Public Health (ABMA), Electrical Engineering (City & Guilds), Food & Nutrition (ABMA), Community Development (ABMA)</td></tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">Registration Details</div>
+        <table>
+            <tr><td class="label">Registration Fee</td><td class="line">K10,000 (Non-refundable)</td></tr>
+            <tr><td class="label">Course Apply For</td><td class="line"></td></tr>
+            <tr><td class="label">First Name</td><td class="line"></td></tr>
+            <tr><td class="label">Surname</td><td class="line"></td></tr>
+            <tr><td class="label">Starting Date</td><td class="line"></td></tr>
+            <tr><td class="label">Marital Status</td><td class="line"></td></tr>
+            <tr><td class="label">Personal Phone Number</td><td class="line"></td></tr>
+            <tr><td class="label">Guardian / Relative</td><td class="line"></td></tr>
+            <tr><td class="label">Home Village</td><td class="line"></td></tr>
+            <tr><td class="label">Branch</td><td class="line">Lilongwe [ ]  Blantyre [ ]</td></tr>
+        </table>
+    </div>
+    <div class="section">
+        <div class="section-title">Additional Information</div>
+        <p class="note">NB: ICM, BMEC, ABE, City & Guilds & TEVETA are examination boards.</p>
+        <p class="note">For informal courses, if you can read and write, you qualify. Our focus is 50% practical work to get you job-ready fast.</p>
+        <p class="note">With 8 years of experience training Malawians for real careers, Luso Technical College is your agency for change.</p>
+    </div>
+</body>
+</html>`;
+            const filename = 'Luso_Registration_Form.pdf';
+            const container = document.createElement('div');
+            container.style.position = 'fixed';
+            container.style.left = '-9999px';
+            container.style.top = '0';
+            container.style.width = '800px';
+            container.id = 'blankPdfContainer';
+            container.innerHTML = blankHTML;
+            document.body.appendChild(container);
+            const opt = { margin: 10, filename, image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2, useCORS: true }, jsPDF: { unit: 'pt', format: 'a4', orientation: 'portrait' } };
+            if (window.html2pdf) {
+                html2pdf().from(container).set(opt).save().then(() => {
+                    if (container.parentNode) document.body.removeChild(container);
+                }).catch(err => {
+                    console.error('Blank PDF generation failed', err);
+                    if (container.parentNode) document.body.removeChild(container);
+                });
+            } else {
+                const blob = new Blob([blankHTML], { type: 'text/html' });
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(blob);
+                link.download = 'Luso_Registration_Form.html';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
                 if (container.parentNode) document.body.removeChild(container);
             }
         }
@@ -1452,7 +2260,8 @@
                 return;
             }
             const fd = new FormData();
-            fd.append('applicant_name', formData.fullName || '');
+            const applicantName = `${formData.firstName || ''} ${formData.surname || ''}`.trim();
+            fd.append('applicant_name', applicantName || '');
             fd.append('applicant_email', formData.email || '');
             fd.append('replyto', formData.email || ''); // some endpoints use this to set reply-to / cc
             fd.append('send_copy', 'true'); // indicate to the endpoint that a copy should be sent to applicant
@@ -1481,13 +2290,18 @@
             // Ensure current form data is read
             try {
                 const el = id => document.getElementById(id) ? document.getElementById(id).value : '';
-                formData.fullName = el('fullName') || formData.fullName || '';
+                formData.firstName = el('firstName') || formData.firstName || '';
+                formData.surname = el('surname') || formData.surname || '';
                 formData.dob = el('dob') || formData.dob || '';
-                formData.gender = el('gender') || formData.gender || '';
+                formData.startDate = el('startDate') || formData.startDate || '';
+                formData.maritalStatus = el('maritalStatus') || formData.maritalStatus || '';
                 formData.phone = el('phone') || formData.phone || '';
+                formData.guardian = el('guardian') || formData.guardian || '';
+                formData.homeVillage = el('homeVillage') || formData.homeVillage || '';
                 formData.email = el('email') || formData.email || '';
                 formData.address = el('address') || formData.address || '';
                 formData.course = el('course') || formData.course || '';
+                formData.branch = document.querySelector('input[name="branch"]:checked') ? document.querySelector('input[name="branch"]:checked').value : formData.branch || '';
                 formData.qualification = el('qualification') || formData.qualification || '';
                 formData.school = el('school') || formData.school || '';
                 formData.motivation = el('motivation') || formData.motivation || '';
@@ -1497,24 +2311,32 @@
             const fullDetails =
                 `NEW APPLICATION - LUSO TECHNICAL COLLEGE\n` +
                 `Ref: ${appRef}\n` +
-                `Name: ${formData.fullName}\n` +
+                `First Name: ${formData.firstName}\n` +
+                `Surname: ${formData.surname}\n` +
                 `DOB: ${formData.dob}\n` +
-                `Gender: ${formData.gender}\n` +
+                `Starting Date: ${formData.startDate}\n` +
+                `Marital Status: ${formData.maritalStatus}\n` +
                 `Phone: ${formData.phone}\n` +
+                `Guardian: ${formData.guardian}\n` +
+                `Home Village: ${formData.homeVillage}\n` +
                 `Email: ${formData.email}\n` +
                 `Address: ${formData.address}\n` +
+                `Branch: ${formData.branch || ''}\n` +
                 `Program: ${formData.course}\n` +
                 `Qualification: ${formData.qualification}\n` +
                 `School: ${formData.school}\n\n` +
                 `Motivation:\n${formData.motivation || ''}\n` +
                 `Passport: ${passportFile ? passportFile.name : 'N/A'}`;
 
-            const waMsg = encodeURIComponent(fullDetails);
+            // Add passport photo reminder at the end
+            const passportReminder = `\n\n📸 PASSPORT PHOTO: Please attach your passport photo to this message or bring it when visiting the campus.`;
+
+            const waMsg = encodeURIComponent(fullDetails + passportReminder);
             // open WhatsApp chat to admissions number
             window.open(`https://wa.me/265995545449?text=${waMsg}`, '_blank');
 
             const statusEl = document.getElementById('whatsappStatus');
-            if (statusEl) { statusEl.style.display = 'block'; statusEl.style.color = '#3498db'; statusEl.textContent = 'Opened WhatsApp chat. If you want to attach the PDF, download it and attach manually.'; }
+            if (statusEl) { statusEl.style.display = 'block'; statusEl.style.color = '#3498db'; statusEl.textContent = '✅ Chat opened! Please attach your passport photo to the message before sending.'; }
 
             // If a server endpoint is configured, also send the generated PDF to it so the server can send via WhatsApp API
             if (WHATSAPP_SEND_ENDPOINT) {
@@ -1543,10 +2365,11 @@
                         pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, imgHeight);
                         const pdfBlob = pdf.output('blob');
                         const fd = new FormData();
+                        const applicantName = `${formData.firstName || ''} ${formData.surname || ''}`.trim();
                         fd.append('recipient', '265995545449');
-                        fd.append('applicant_name', formData.fullName || '');
+                        fd.append('applicant_name', applicantName || '');
                         fd.append('applicant_email', formData.email || '');
-                        fd.append('application_pdf', pdfBlob, `Luso_Application_${(formData.fullName||'applicant').replace(/\s+/g,'_')}.pdf`);
+                        fd.append('application_pdf', pdfBlob, `Luso_Application_${(applicantName||'applicant').replace(/\s+/g,'_')}.pdf`);
                         const res = await fetch(WHATSAPP_SEND_ENDPOINT, { method: 'POST', body: fd });
                         if (!res.ok) throw new Error('WhatsApp send endpoint error ' + res.status);
                         if (statusEl) { statusEl.style.color = '#27ae60'; statusEl.textContent = 'Application sent to WhatsApp via server.'; }
@@ -1561,32 +2384,93 @@
             }
         }
 
+        // Helper: prefill registration form and scroll to it
+        function applyForProgram(courseLabel) {
+            try {
+                const sel = document.getElementById('course');
+                if (!sel) { window.location.hash = '#registrationForm'; return; }
+                const found = Array.from(sel.options).find(o => (o.text || '').toLowerCase().includes(courseLabel.toLowerCase()) || (o.value || '').toLowerCase().includes(courseLabel.toLowerCase()));
+                if (found) {
+                    sel.value = found.value;
+                } else {
+                    // add option and select it
+                    const opt = document.createElement('option');
+                    opt.value = courseLabel;
+                    opt.text = courseLabel + ' (Selected)';
+                    sel.appendChild(opt);
+                    sel.value = opt.value;
+                }
+                // Scroll to form and focus select
+                const form = document.getElementById('registrationForm');
+                if (form) {
+                    form.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    sel.focus();
+                } else {
+                    window.location.hash = '#registrationForm';
+                }
+            } catch (e) { console.warn('applyForProgram error', e); window.location.hash = '#registrationForm'; }
+        }
+
         // ===== SUBMIT APPLICATION =====
+        function validateRegistrationForm() {
+            let valid = true;
+            document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
+            document.querySelectorAll('.form-group input, .form-group select, .form-group textarea').forEach(el => el.classList.remove('error'));
+
+            const firstName = document.getElementById('firstName').value.trim();
+            const surname = document.getElementById('surname').value.trim();
+            const startDate = document.getElementById('startDate').value;
+            const maritalStatus = document.getElementById('maritalStatus').value;
+            const phone = document.getElementById('phone').value.trim();
+            const guardian = document.getElementById('guardian').value.trim();
+            const homeVillage = document.getElementById('homeVillage').value.trim();
+            const course = document.getElementById('course').value;
+            const branch = document.querySelector('input[name="branch"]:checked');
+            const email = document.getElementById('email').value.trim();
+            const address = document.getElementById('address').value.trim();
+
+            if (!firstName) { showError('firstName', 'firstNameError'); valid = false; }
+            if (!surname) { showError('surname', 'surnameError'); valid = false; }
+            if (!startDate) { showError('startDate', 'startDateError'); valid = false; }
+            if (!maritalStatus) { showError('maritalStatus', 'maritalStatusError'); valid = false; }
+            if (!phone) { showError('phone', 'phoneError'); valid = false; }
+            if (!guardian) { showError('guardian', 'guardianError'); valid = false; }
+            if (!homeVillage) { showError('homeVillage', 'homeVillageError'); valid = false; }
+            if (!course) { showError('course', 'courseError'); valid = false; }
+            if (!branch) { document.getElementById('branchError').classList.add('show'); valid = false; }
+            if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('email', 'emailError'); valid = false; }
+            if (!address) { showError('address', 'addressError'); valid = false; }
+
+            if (valid) {
+                formData.firstName = firstName;
+                formData.surname = surname;
+                formData.startDate = startDate;
+                formData.maritalStatus = maritalStatus;
+                formData.phone = phone;
+                formData.guardian = guardian;
+                formData.homeVillage = homeVillage;
+                formData.course = course;
+                formData.branch = branch ? branch.value : '';
+                formData.email = email;
+                formData.address = address;
+            }
+
+            return valid;
+        }
+
         function submitApplication() {
-            if (!validateStep(4)) return;
-            formData.course = document.getElementById('course').value;
-            formData.qualification = document.getElementById('qualification').value;
-            formData.school = document.getElementById('school').value.trim();
-            formData.motivation = document.getElementById('motivation').value.trim();
-
-            // Generate and download the filled form as an HTML file for the user
+            if (!validateRegistrationForm()) return;
+            // Download the filled form as PDF
             downloadFilledForm();
-
-            // Show submission success message (no automatic WhatsApp sending)
-            document.getElementById('submissionSuccess').classList.add('show');
-
-            // Reset to step 1 in the UI
-            currentStep = 1;
-            showStep(1);
-
-            // Clear form inputs visually
-            document.querySelectorAll('#formContainer input, #formContainer select, #formContainer textarea').forEach(el => {
-                if (el.type === 'file') el.value = '';
-                else el.value = '';
-                el.classList.remove('error');
-            });
-            // Clear uploaded previews
-            removeFile('passport');
+            // Also send the filled application to WhatsApp
+            sendApplicationToWhatsApp();
+            const successEl = document.getElementById('submissionSuccess');
+            if (successEl) {
+                successEl.style.display = 'block';
+                successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            document.getElementById('registrationForm').reset();
+            document.querySelectorAll('#registrationForm .form-group input, #registrationForm .form-group select, #registrationForm .form-group textarea').forEach(el => el.classList.remove('error'));
             formData = {};
         }
 
