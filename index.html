@@ -1570,6 +1570,18 @@
                                     </td>
                                 </tr>
                                 <tr>
+                                    <td>
+                                        <label for="email">Email Address <span class="required">*</span></label>
+                                        <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                                        <div class="error-message" id="emailError">Please enter a valid email address.</div>
+                                    </td>
+                                    <td>
+                                        <label for="address">Home Address <span class="required">*</span></label>
+                                        <input type="text" id="address" name="address" placeholder="Home address" required>
+                                        <div class="error-message" id="addressError">Please enter your home address.</div>
+                                    </td>
+                                </tr>
+                                <tr>
                                     <td colspan="2">
                                         <label>Branch <span class="required">*</span></label>
                                         <div class="radio-group">
@@ -2359,9 +2371,7 @@
 
         function submitApplication() {
             if (!validateRegistrationForm()) return;
-            // Download the filled form as PDF
-            downloadFilledForm();
-            // Also send the filled application to WhatsApp
+            // Send the filled application to the institution's WhatsApp number
             sendApplicationToWhatsApp();
             const successEl = document.getElementById('submissionSuccess');
             if (successEl) {
