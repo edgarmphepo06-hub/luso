@@ -2240,8 +2240,8 @@
             const passportReminder = `\n\n📸 PASSPORT PHOTO: Please attach your passport photo to this message or bring it when visiting the campus.`;
 
             const waMsg = encodeURIComponent(fullDetails + passportReminder);
-            // open WhatsApp chat to admissions number
-            window.open(`https://wa.me/265995545449?text=${waMsg}`, '_blank');
+            // open WhatsApp chat to admissions number (works on mobile, tablet, and desktop)
+            window.location.href = `https://wa.me/265995545449?text=${waMsg}`;
 
             const statusEl = document.getElementById('whatsappStatus');
             if (statusEl) { statusEl.style.display = 'block'; statusEl.style.color = '#3498db'; statusEl.textContent = '✅ Chat opened! Please attach your passport photo to the message before sending.'; }
@@ -2389,7 +2389,7 @@
             const subject = form.querySelector('input[placeholder="Subject"]').value.trim();
             const message = form.querySelector('textarea').value.trim();
             const fullMsg = encodeURIComponent(`*Contact Form - Luso Technical College*%0A%0A*Name:* ${name}%0A*Email:* ${email}%0A*Subject:* ${subject||'General Inquiry'}%0A%0A*Message:*%0A${message}`);
-            window.open(`https://wa.me/265995545449?text=${fullMsg}`, '_blank');
+            window.location.href = `https://wa.me/265995545449?text=${fullMsg}`;
             form.reset();
             alert('Your message has been sent! We will respond to you shortly.');
         }
