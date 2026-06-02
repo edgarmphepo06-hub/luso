@@ -1420,7 +1420,7 @@
     <section class="application section-padding" id="apply">
         <div class="container">
             <h2 class="section-title">Luso Technical College Registration Form</h2>
-            <p class="section-subtitle">Register now for our 2026 intake. Complete the form below and submit your details via WhatsApp or download your filled application.</p>
+            <p class="section-subtitle">Register now for our 2026 intake. Complete the form below and send your details to our admissions team via WhatsApp.</p>
             <div class="form-container" id="formContainer">
                 <!-- Logo at top of form -->
                 <div style="text-align:center;margin-bottom:24px;">
@@ -1595,8 +1595,7 @@
                         </table>
                     </div>
                     <div class="form-actions">
-                        <button type="button" class="btn btn-primary" onclick="submitApplication()"><i class="fas fa-paper-plane"></i> Submit Application</button>
-                        <button type="button" class="btn btn-whatsapp" onclick="sendApplicationToWhatsApp()"><i class="fab fa-whatsapp"></i> Send via WhatsApp</button>
+                        <button type="button" class="btn btn-whatsapp" onclick="submitApplication()" style="min-width:250px;"><i class="fab fa-whatsapp"></i> Submit Application via WhatsApp</button>
                     </div>
                 </form>
 
@@ -1610,8 +1609,6 @@
                     <h2>Application Submitted Successfully!</h2>
                     <p>Your registration has been received. Our admissions team will contact you within 2-3 business days.</p>
                     <div class="success-actions">
-                        <button type="button" class="btn btn-primary" onclick="downloadFilledForm()"><i class="fas fa-download"></i> Download Application</button>
-                        <button type="button" class="btn btn-whatsapp" onclick="sendApplicationToWhatsApp()"><i class="fab fa-whatsapp"></i> Send to WhatsApp</button>
                         <a href="#home" class="btn btn-outline" style="border-color:var(--primary-blue);color:var(--primary-blue);"><i class="fas fa-home"></i> Back to Home</a>
                     </div>
                     <p style="margin-top:15px;font-size:0.9rem;color:var(--text-dark);" id="emailStatus"></p>
